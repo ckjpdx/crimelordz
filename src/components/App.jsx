@@ -7,17 +7,6 @@ import { Switch, Route } from 'react-router-dom';
 function App(){
   return (
     <div>
-      <style global jsx>{`
-        html {
-          box-sizing: border-box;
-        }
-        *, *:before, *:after {
-          box-sizing: inherit;
-        }
-        body {
-          background: dimgrey;
-        }
-      `}</style>
       <Header />
       <FileCabinet />
     </div>

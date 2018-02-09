@@ -32,13 +32,6 @@ const masterCrimeLordList = [
 function FileCabinet() {
   return(
     <div className='file-cabinet'>
-      <style jsx>{`
-        .file-cabinet {
-          width: 50%;
-          background: yellow;
-          height: 100px;
-        }
-      `}</style>
       {masterCrimeLordList.map((boss, i) =>
         <Profile boss={boss} key={i} />
       )}

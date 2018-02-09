@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const { resolve } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
 
@@ -65,6 +66,16 @@ module.exports = {
             name: 'images/[hash]-[name].[ext]'
           }
         }
+      },
+      {
+        test: /\.scss$/,
+        use: [{
+            loader: "style-loader" // creates style nodes from JS strings
+        }, {
+            loader: "css-loader" // translates CSS into CommonJS
+        }, {
+            loader: "sass-loader" // compiles Sass to CSS
+        }]
       }
     ]
   },
@@ -78,5 +89,9 @@ module.exports = {
       title: 'Crime Lordz',
       filename: resolve(__dirname, 'build', 'index.html'),
     }),
+    new ExtractTextPlugin('dist/styles/main.css', {
+      allChunks: true,
+      disable: true
+    })
   ]
 };
