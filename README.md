@@ -1,7 +1,8 @@
 # Sass in React with Webpack
+## Description
+This guide is for using Sass (.scss specifically) with your React project. It is assumed that you have a project spun up with webpack and have hot module replacement installed and working. This should reload on changes in your Sass files. If you are building for production, change the "disable" option to "false" in the ExtractTextPlugin configuration in the "plugins" section of the Webpack config file. 
 
-This easy to follow guide is for using Sass (.scss specifically) with your React project. It is assumed that you have a project spun up with webpack and have hot module replacement installed and working. This should reload on changes in your Sass files. If you are building for production, change the "disable" option to "false" in the ExtractTextPlugin configuration in the "plugins" section of the Webpack config file. 
-
+## Installation
 _NPM package installation_
 * $ npm install sass-loader node-sass css-loader style-loader extract-text-webpack-plugin -D
 
